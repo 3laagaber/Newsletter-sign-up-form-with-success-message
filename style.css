@@ -1,0 +1,142 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+--Tomato: hsl(4, 100%, 67%);
+--Dark-Slate-Grey: hsl(234, 29%, 20%);
+--Charcoal-Grey: hsl(235, 18%, 26%);
+--Grey: hsl(231, 7%, 60%);
+--White: hsl(0, 0%, 100%);
+}
+body{
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    list-style: none;
+}
+.text p{
+    color: var(--Dark-Slate-Grey);
+    margin-bottom: 10px;
+    display: flex;
+    font-weight: 400;
+    align-items: center;
+    gap: 15px;
+}
+main{
+    min-height: 100vh;
+    background-color: var(--Dark-Slate-Grey);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: var(--White);
+    display: flex;
+    border-radius: 20px;
+}
+.container .text {
+    height: 500px;
+    padding: 40px;
+}
+.special{
+    max-width: 350px;
+    max-height: 400px;
+}
+.text h1{
+    font-weight: 700;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 40px;
+    color: var(--Dark-Slate-Grey);
+}
+.text p:first-of-type{
+    margin-bottom: 30px;
+}
+.text form {
+    display: flex;
+    flex-direction: column;
+}
+.text form label {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 10px 0 9px 0;
+    color: var(--Dark-Slate-Grey);
+}
+.text form .email{
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--Grey);
+    border-radius: 10px;
+    font-size: medium;
+    cursor: pointer;
+
+}
+.btn{
+    padding: 15px;
+    color: white;
+    background-color: var(--Dark-Slate-Grey);
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: medium;
+}
+.btn:hover{
+    background-color: var(--Tomato);
+}
+.container picture{
+    padding: 20px;
+}
+.container picture .one {
+    width: 300px;
+    height: auto;
+}
+.text form .error {
+    background-color: hsl(4deg 84.31% 46.22% / 19%);
+    position: relative;
+}
+.text form .error::before{
+    content: "Valid email required";
+    color: red;
+    position: absolute;
+}
+.text .mark{
+    margin: 0 0 15px 0;
+    width: 60px !important;
+    height: 60px !important;
+}
+.button{
+    width: 100%;
+    border-radius: 8px;
+}
+@media (max-width:768px){
+    main{
+        background-color: white;
+    }
+    .container{
+        flex-direction: column-reverse;
+        position: absolute;
+        top: 0;
+    }
+    .container picture {
+        padding: 0;
+    }
+    .container picture img {
+        width: 100%;
+    }
+    .button{
+        position: absolute;
+    bottom: -220px;
+    width: 78%;
+    }
+    .text .mark{
+        margin: 80px 0 45px 0;
+        width: 60px !important;
+        height: 60px !important;
+    }
+    }
+    .text h1{
+        margin-top: -8px;
+    }
